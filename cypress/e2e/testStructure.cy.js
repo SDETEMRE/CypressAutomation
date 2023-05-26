@@ -24,7 +24,7 @@ describe('Context: My first Tests',()=>{
     it('Test 3' ,()=>{
         expect(false).not.to.equal(true);
     })
-    it('Test 4' ,()=>{
+    it.skip('Test 4' ,()=>{
         expect(5).to.equal(5);
     })
     it('Test 5' ,()=>{
