@@ -16,6 +16,18 @@ describe('Context: My first Tests',()=>{
     })
     it('Opening a web application', ()=>{
         cy.visit('registration_form');
-        cy.get(':nth-child(5) > a').click;
+        
+    })
+    it('Test 2' ,()=>{
+        expect(false).to.equal(false);
+    })
+    it('Test 3' ,()=>{
+        expect(false).not.to.equal(true);
+    })
+    it('Test 4' ,()=>{
+        expect(5).to.equal(5);
+    })
+    it('Test 5' ,()=>{
+        expect(true).to.equal('5'==5);
     })
 })
