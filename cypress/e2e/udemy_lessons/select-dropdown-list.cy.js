@@ -12,6 +12,6 @@ describe("Interact with dropdown list", () => {
     cy.get("#dropdowm-menu-3").select("JQuery").contains("JQuery");
 
     cy.get("#dropdowm-menu-2").select("maven").should("have.value", "maven");// attribute value
-    cy.get("#dropdowm-menu-2").select("junit").contains("JUnit");//text value
+    cy.get("#dropdowm-menu-2").select("junit").contains("JUnit");//text valuegit 
   });
 });
