@@ -1,4 +1,7 @@
 /// <reference types="Cypress" />
+
+//const { use } = require("chai");
+
 describe("Handling data via webdriveruni", () => {
   beforeEach(() => {
     cy.visit("http://webdriveruniversity.com/");
@@ -34,6 +37,20 @@ describe("Handling data via webdriveruni", () => {
           .then(function (age) {
             const userAge = age.text();
             expect(userAge).to.equal("80");
+          });
+      }
+    });
+  });
+  it("Find the age for given name", () => {
+    cy.get("#thumbnail-1 tr td:nth-child(2)").each(($el, index, $list) => {
+      const lastName = $el.text();
+      if (lastName.includes("Smith")) {
+        cy.get("#thumbnail-1 tr td:nth-child(2)")
+          .eq(index)
+          .next()
+          .then(function (age) {
+            const userAge = age.text();
+            expect(userAge).to.equal("45");
           });
       }
     });
