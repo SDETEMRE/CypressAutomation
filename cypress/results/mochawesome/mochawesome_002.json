@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-03-09T17:43:36.023Z",
+    "end": "2024-03-09T17:43:38.933Z",
+    "duration": 2910,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c9817176-573f-4bae-b2e9-faf5b38214b0",
+      "title": "",
+      "fullFile": "cypress/e2e/udemy_lessons/alerts.cy.js",
+      "file": "cypress/e2e/udemy_lessons/alerts.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e9be5ba9-aaae-48bb-9211-49bc1727e66d",
+          "title": "Handle JS alerts",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Confirm js alerts contains thr correct text",
+              "fullTitle": "Handle JS alerts Confirm js alerts contains thr correct text",
+              "timedOut": null,
+              "duration": 1964,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.webdriveruniversity.com/\");\ncy.get(\"#popup-alerts\").invoke(\"removeAttr\", \"target\").click();\ncy.get(\"#button1\").click();\ncy.on(\"window:alert\", str => {\n  expect(str).to.equal(\"I am an alert box!\");\n});",
+              "err": {},
+              "uuid": "8b0a7fd5-f7b0-4fcf-98f3-b2e71bb14b59",
+              "parentUUID": "e9be5ba9-aaae-48bb-9211-49bc1727e66d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate js confirm alert box works correctly when clicking ok",
+              "fullTitle": "Handle JS alerts Validate js confirm alert box works correctly when clicking ok",
+              "timedOut": null,
+              "duration": 302,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.webdriveruniversity.com/\");\ncy.get(\"#popup-alerts\").invoke(\"removeAttr\", \"target\").click();\ncy.get(\"#button4\").click();\ncy.on(\"window:confirm\", str => {\n  return true;\n});\ncy.get(\"#confirm-alert-text\").contains(\"You pressed OK!\");",
+              "err": {},
+              "uuid": "a40fc47a-ab40-4f27-9fa1-e96ad224c787",
+              "parentUUID": "e9be5ba9-aaae-48bb-9211-49bc1727e66d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate js confirm alert box works correctly when clicking cancel",
+              "fullTitle": "Handle JS alerts Validate js confirm alert box works correctly when clicking cancel",
+              "timedOut": null,
+              "duration": 297,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.webdriveruniversity.com/\");\ncy.get(\"#popup-alerts\").invoke(\"removeAttr\", \"target\").click();\ncy.get(\"#button4\").click();\ncy.on(\"window:confirm\", str => {\n  return false;\n});\ncy.get(\"#confirm-alert-text\").contains(\"You pressed Cancel!\");",
+              "err": {},
+              "uuid": "2340c781-cdd3-4e33-9eee-fb22d78ef49a",
+              "parentUUID": "e9be5ba9-aaae-48bb-9211-49bc1727e66d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate js confirm alert box using a stub",
+              "fullTitle": "Handle JS alerts Validate js confirm alert box using a stub",
+              "timedOut": null,
+              "duration": 302,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.webdriveruniversity.com/\");\ncy.get(\"#popup-alerts\").invoke(\"removeAttr\", \"target\").click();\nconst stub = cy.stub();\ncy.on(\"window:confirm\", stub);\ncy.get(\"#button4\").click().then(() => {\n  expect(stub.getCall(0)).to.be.calledWith(\"Press a button!\");\n}).then(() => {\n  return true;\n}).then(() => {\n  cy.get(\"#confirm-alert-text\").contains(\"You pressed OK!\");\n});",
+              "err": {},
+              "uuid": "6110e429-69a2-4bce-a967-a83de0024df6",
+              "parentUUID": "e9be5ba9-aaae-48bb-9211-49bc1727e66d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8b0a7fd5-f7b0-4fcf-98f3-b2e71bb14b59",
+            "a40fc47a-ab40-4f27-9fa1-e96ad224c787",
+            "2340c781-cdd3-4e33-9eee-fb22d78ef49a",
+            "6110e429-69a2-4bce-a967-a83de0024df6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2865,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

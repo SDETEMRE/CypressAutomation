@@ -13,6 +13,7 @@ class Contact_Us_PO {
     cy.get("textarea.feedback-input").type(comment);
     cy.get('[type="submit"]').click();
     cy.get($selector).contains(textToLocate);
+    cy.screenshot("make a contact us from submission");
   }
 }
 export default Contact_Us_PO;

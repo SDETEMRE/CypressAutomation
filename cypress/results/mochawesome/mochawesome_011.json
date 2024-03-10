@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-03-09T17:44:13.545Z",
+    "end": "2024-03-09T17:44:13.579Z",
+    "duration": 34,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "70684ef1-35ca-4c63-8dd4-3b1d0af1b3bb",
+      "title": "",
+      "fullFile": "cypress/e2e/udemy_lessons/hooks.cy.js",
+      "file": "cypress/e2e/udemy_lessons/hooks.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "51847eeb-ee94-45fe-bd87-9153a05de845",
+          "title": "Hooks",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Example test1",
+              "fullTitle": "Hooks Example test1",
+              "timedOut": null,
+              "duration": 9,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log(\"Example test1!\");",
+              "err": {},
+              "uuid": "fa7c21af-9011-48d4-bb82-3ec7125204a9",
+              "parentUUID": "51847eeb-ee94-45fe-bd87-9153a05de845",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Example test2",
+              "fullTitle": "Hooks Example test2",
+              "timedOut": null,
+              "duration": 4,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log(\"Example test2!\");",
+              "err": {},
+              "uuid": "bbd09b1c-5bee-4090-a34d-8757db24fa8b",
+              "parentUUID": "51847eeb-ee94-45fe-bd87-9153a05de845",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fa7c21af-9011-48d4-bb82-3ec7125204a9",
+            "bbd09b1c-5bee-4090-a34d-8757db24fa8b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

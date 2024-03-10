@@ -10,6 +10,8 @@ describe("Add multiple items to basket", () => {
     });
   });
   beforeEach(() => {
+    cy.clearLocalStorage();
+    cy.clearCookies();
     // cy.visit("https://www.automationteststore.com/");
     // cy.get("a[href*='product/category&path=']").contains("Hair Care").click();
     autoStore_Homepage_PO.accessHomepage();

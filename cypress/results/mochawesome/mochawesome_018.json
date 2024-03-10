@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-03-09T17:44:44.797Z",
+    "end": "2024-03-09T17:44:47.149Z",
+    "duration": 2352,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9961d197-e414-4d8d-a19a-871f9ed4173d",
+      "title": "",
+      "fullFile": "cypress/e2e/udemy_lessons/upload-file.cy.js",
+      "file": "cypress/e2e/udemy_lessons/upload-file.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1fe9ac3d-28fa-4eb7-88de-edc2b90223f7",
+          "title": "Test File Upload via webdriveruni",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Upload a file....",
+              "fullTitle": "Test File Upload via webdriveruni Upload a file....",
+              "timedOut": null,
+              "duration": 1133,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://webdriveruniversity.com/\");\ncy.get(\"#file-upload\").invoke(\"removeAttr\", \"target\").click({\n  force: true\n});\ncy.get(\"#myFile\").selectFile(\"cypress/fixtures/istqb_Emre_Dincsoy.png\");\ncy.get(\"#submit-button\").click();",
+              "err": {},
+              "uuid": "7506e2f8-3f2d-475d-ac84-181969fc3b06",
+              "parentUUID": "1fe9ac3d-28fa-4eb7-88de-edc2b90223f7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Upload NO file....",
+              "fullTitle": "Test File Upload via webdriveruni Upload NO file....",
+              "timedOut": null,
+              "duration": 323,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://webdriveruniversity.com/\");\ncy.get(\"#file-upload\").invoke(\"removeAttr\", \"target\").click({\n  force: true\n});\ncy.get(\"#submit-button\").click();",
+              "err": {},
+              "uuid": "9efc5c77-ad77-4c0d-9239-5a285920c321",
+              "parentUUID": "1fe9ac3d-28fa-4eb7-88de-edc2b90223f7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7506e2f8-3f2d-475d-ac84-181969fc3b06",
+            "9efc5c77-ad77-4c0d-9239-5a285920c321"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1456,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
