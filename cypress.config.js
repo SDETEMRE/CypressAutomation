@@ -1,8 +1,26 @@
 const { defineConfig } = require("cypress");
+const fs = require("fs-extra");
+const path = require("path");
+
+function getConfigurationByFile(file) {
+  const pathToConfigFile = path.resolve("cypress\\config", `${file}.json`);
+
+  if (!fs.existsSync(pathToConfigFile)) {
+    console.log("No custom config file found");
+    return {};
+  }
+  return fs.readJson(pathToConfigFile);
+}
 
 module.exports = defineConfig({
   projectId: "apq2c4",
   e2e: {
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+      const file = config.env.configFile || "";
+
+      return getConfigurationByFile(file);
+    },
     baseUrl: "https://webdriveruniversity.com/",
     watchForFileChanges: false,
     defaultCommandTimeout: 3000,
@@ -13,6 +31,10 @@ module.exports = defineConfig({
     viewportWidth: 1900,
     execTimeout: 10000,
     testIsolation: false,
+    retries: {
+      runMode: 0,
+      openMode: 0,
+    },
     specPattern: "cypress/e2e/**/*.cy.{js,jsx,ts,tsx}",
     excludeSpecPattern: "cypress/e2e/2-advanced-examples/*.cy.js",
     screenshotOnRunFailure: true,
@@ -22,9 +44,7 @@ module.exports = defineConfig({
     reporterOptions: {
       configFile: "reporter-config.json",
     },
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
+
     experimentalModifyObstructiveThirdPartyCode: true,
     chromeWebSecurity: false,
     env: {
