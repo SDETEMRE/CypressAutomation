@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-03-11T12:56:31.092Z",
+    "end": "2024-03-11T12:56:33.596Z",
+    "duration": 2504,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2070ae00-9a19-462a-a75c-86369b0f1a03",
+      "title": "",
+      "fullFile": "cypress/e2e/udemy_lessons/data-tables.cy.js",
+      "file": "cypress/e2e/udemy_lessons/data-tables.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f939605e-1aa9-42d2-a57b-a97d95184c21",
+          "title": "Handling data via webdriveruni",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Calculate and assert the total age of all users",
+              "fullTitle": "Handling data via webdriveruni Calculate and assert the total age of all users",
+              "timedOut": null,
+              "duration": 1093,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let userDetails = [];\nlet numb = 0;\ncy.get(\"#thumbnail-1 td\").each(($el, index, $list) => {\n  userDetails[index] = $el.text();\n}).then(() => {\n  let i;\n  for (i = 0; i < userDetails.length; i++) {\n    if (Number(userDetails[i])) {\n      numb += Number(userDetails[i]);\n    }\n    //cy.log(userDetails[i]);\n  }\n  cy.log(\"Total age : \" + numb);\n  expect(numb).to.eq(322);\n});",
+              "err": {},
+              "uuid": "572f8198-eacf-4a9f-aa2f-8174eeadbe93",
+              "parentUUID": "f939605e-1aa9-42d2-a57b-a97d95184c21",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Calculate and assert the age of a given user based on last name",
+              "fullTitle": "Handling data via webdriveruni Calculate and assert the age of a given user based on last name",
+              "timedOut": null,
+              "duration": 199,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#thumbnail-1 tr td:nth-child(2)\").each(($el, index, $list) => {\n  const text = $el.text();\n  if (text.includes(\"Woods\")) {\n    cy.get(\"#thumbnail-1 tr td:nth-child(2)\").eq(index).next().then(function (age) {\n      const userAge = age.text();\n      expect(userAge).to.equal(\"80\");\n    });\n  }\n});",
+              "err": {},
+              "uuid": "4e966944-68cf-4991-8b8e-0199c24bf13f",
+              "parentUUID": "f939605e-1aa9-42d2-a57b-a97d95184c21",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Find the age for given name",
+              "fullTitle": "Handling data via webdriveruni Find the age for given name",
+              "timedOut": null,
+              "duration": 193,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#thumbnail-1 tr td:nth-child(2)\").each(($el, index, $list) => {\n  const lastName = $el.text();\n  if (lastName.includes(\"Smith\")) {\n    cy.get(\"#thumbnail-1 tr td:nth-child(2)\").eq(index).next().then(function (age) {\n      const userAge = age.text();\n      expect(userAge).to.equal(\"45\");\n    });\n  }\n});",
+              "err": {},
+              "uuid": "fa5997c2-c549-4757-9d8a-d8d55744a0ae",
+              "parentUUID": "f939605e-1aa9-42d2-a57b-a97d95184c21",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "572f8198-eacf-4a9f-aa2f-8174eeadbe93",
+            "4e966944-68cf-4991-8b8e-0199c24bf13f",
+            "fa5997c2-c549-4757-9d8a-d8d55744a0ae"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1485,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

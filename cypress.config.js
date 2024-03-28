@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 const fs = require("fs-extra");
 const path = require("path");
+const cucumber = require('cypress-cucumber-preprocessor').default;
 
 function getConfigurationByFile(file) {
   const pathToConfigFile = path.resolve("cypress\\config", `${file}.json`);
@@ -16,6 +17,8 @@ module.exports = defineConfig({
   projectId: "apq2c4",
   e2e: {
     setupNodeEvents(on, config) {
+      on("file:preprocessor", cucumber());
+
       // implement node event listeners here
       const file = config.env.configFile || "";
 
@@ -35,8 +38,12 @@ module.exports = defineConfig({
       runMode: 0,
       openMode: 0,
     },
-    specPattern: "cypress/e2e/**/*.cy.{js,jsx,ts,tsx}",
-    excludeSpecPattern: "cypress/e2e/2-advanced-examples/*.cy.js",
+    "specPattern": [
+      "cypress/e2e/**/*.feature",
+      "cypress/e2e/**/*.cy.{js,jsx,ts,tsx}"
+    ],
+   
+    //excludeSpecPattern: "cypress/e2e/2-advanced-examples/*.cy.js",
     screenshotOnRunFailure: true,
     video: false,
     trashAssetsBeforeRuns: true,

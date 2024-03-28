@@ -1,6 +1,7 @@
 ///<reference types="cypress" />
 import AutoStore_Homepage_Po from "../../support/pageObjects/automation-test-store/AutoStore_Homepage_PO";
 import AutoStore_HairCare_Po from "../../support/pageObjects/automation-test-store/AutoStore_HairCare_PO";
+
 describe("Add multiple items to basket", () => {
   const autoStore_Homepage_PO = new AutoStore_Homepage_Po();
   const autoStore_HairCare_Po = new AutoStore_HairCare_Po();

@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-03-11T12:56:51.416Z",
+    "end": "2024-03-11T12:56:53.822Z",
+    "duration": 2406,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6069ba7d-8746-48d0-be00-a41db806f524",
+      "title": "",
+      "fullFile": "cypress/e2e/udemy_lessons/mouse-actions.cy.js",
+      "file": "cypress/e2e/udemy_lessons/mouse-actions.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9f52f04b-7a73-47eb-8bbe-996ae1c1bcd5",
+          "title": "Test mouse actions",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Scroll element into view",
+              "fullTitle": "Test mouse actions Scroll element into view",
+              "timedOut": null,
+              "duration": 1661,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.webdriveruniversity.com/\");\ncy.get(\"#actions\").scrollIntoView().invoke(\"removeAttr\", \"target\").click();",
+              "err": {},
+              "uuid": "602151d5-0e53-43d5-9351-ae3e6f5527b4",
+              "parentUUID": "9f52f04b-7a73-47eb-8bbe-996ae1c1bcd5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "drag and drop",
+              "fullTitle": "Test mouse actions drag and drop",
+              "timedOut": null,
+              "duration": 258,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.webdriveruniversity.com/\");\ncy.get(\"#actions\").scrollIntoView().invoke(\"removeAttr\", \"target\").click();\ncy.get(\"#draggable\").trigger(\"mousedown\", {\n  which: 1\n});\ncy.get(\"#droppable\").trigger(\"mousemove\").trigger(\"mouseup\", {\n  force: true\n});",
+              "err": {},
+              "uuid": "092d8039-c8dd-4f36-a54d-b39052c2a7fe",
+              "parentUUID": "9f52f04b-7a73-47eb-8bbe-996ae1c1bcd5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "double click",
+              "fullTitle": "Test mouse actions double click",
+              "timedOut": null,
+              "duration": 219,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.webdriveruniversity.com/\");\ncy.get(\"#actions\").scrollIntoView().invoke(\"removeAttr\", \"target\").click();\ncy.get(\"#double-click\").trigger(\"dblclick\");",
+              "err": {},
+              "uuid": "515e55c1-385e-4fb4-abdf-c4d1a635b916",
+              "parentUUID": "9f52f04b-7a73-47eb-8bbe-996ae1c1bcd5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Click and hold with assertion",
+              "fullTitle": "Test mouse actions Click and hold with assertion",
+              "timedOut": null,
+              "duration": 225,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.webdriveruniversity.com/\");\ncy.get(\"#actions\").scrollIntoView().invoke(\"removeAttr\", \"target\").click();\ncy.get(\"#click-box\").trigger(\"mousedown\", {\n  which: 1\n}).then($element => {\n  expect($element).to.have.css(\"background-color\", \"rgb(0, 255, 0)\");\n});",
+              "err": {},
+              "uuid": "9b3f0739-b674-4c2c-a811-75e8310605da",
+              "parentUUID": "9f52f04b-7a73-47eb-8bbe-996ae1c1bcd5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "602151d5-0e53-43d5-9351-ae3e6f5527b4",
+            "092d8039-c8dd-4f36-a54d-b39052c2a7fe",
+            "515e55c1-385e-4fb4-abdf-c4d1a635b916",
+            "9b3f0739-b674-4c2c-a811-75e8310605da"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2363,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

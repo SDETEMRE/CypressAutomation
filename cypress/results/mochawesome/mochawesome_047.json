@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-03-11T12:56:01.673Z",
+    "end": "2024-03-11T12:56:04.573Z",
+    "duration": 2900,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ea45ac4f-1cf0-4390-8c76-a683bb6e657e",
+      "title": "",
+      "fullFile": "cypress/e2e/udemy_lessons/alisas-and-invoke.cy.js",
+      "file": "cypress/e2e/udemy_lessons/alisas-and-invoke.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f7d72f6d-729b-40f8-9d92-9fb45403fe6a",
+          "title": "alias and invoke",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "validate numbers of product and cart text",
+              "fullTitle": "alias and invoke validate numbers of product and cart text",
+              "timedOut": null,
+              "duration": 1763,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.automationteststore.com/\");\ncy.get(\".thumbnail\").as(\"lengthOfProduct\");",
+              "err": {},
+              "uuid": "d91259de-c9a8-4425-9925-9f7def59ffa8",
+              "parentUUID": "f7d72f6d-729b-40f8-9d92-9fb45403fe6a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d91259de-c9a8-4425-9925-9f7def59ffa8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1763,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
